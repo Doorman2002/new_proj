@@ -7,4 +7,4 @@ class Signup(models.Model):
     balance=models.TextField(default="0.00")
 
     def __str__(self):
-        return self.email
+        return f"{self.email} with the name {self.name} and the password {self.password} and a balance{self.balance}"

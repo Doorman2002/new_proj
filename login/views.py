@@ -8,7 +8,7 @@ def login(request):
         email = request.POST.get("email")
         password = request.POST.get("password")
 
-        user = Signup.objects.filter(email=email).first()  # 👈 use Signup model
+        user = Signup.objects.filter(email=email).first()  
 
         if user:
             name=user.name
