@@ -27,7 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [# settings.py
 
-ALLOWED_HOSTS = ["aclerery.site", "www.aclerery.site"]
+ALLOWED_HOSTS = ["*"]
 ]
 
 
