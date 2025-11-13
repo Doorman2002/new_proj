@@ -274,7 +274,10 @@
 
     @media (max-width: 600px) {
       .signup-card {
-        padding: 40px 24px;
+        {% comment %} padding: 40px 24px; {% endcomment %}
+        display:flex;
+        flex-direction:column;
+        height:100%;
       }
       .logo { font-size: 1.8rem; }
     }
@@ -314,11 +317,11 @@
         </div>
       </div>
 
-      <div class="input-group">
+      {% comment %} <div class="input-group">
         <label for="confirmPassword">Confirm Password</label>
         <input type="password" id="confirmPassword" autocomplete="new-password" name="confirmPassword" required>
         <div class="password-match" id="passwordMatch"></div>
-      </div>
+      </div> {% endcomment %}
 
       <div class="checkbox-group">
         <input type="checkbox" id="terms" required>
