@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from django.contrib import messages
 from django.db import IntegrityError
 from django.contrib.auth.hashers import make_password
@@ -11,10 +11,10 @@ def signup(request):
         password = request.POST.get("password")
         confirm_password = request.POST.get("confirmPassword")
 
-        # ✅ 1. Check password match
-        if password != confirm_password:
-            messages.error(request, "Passwords do not match.")
-            return render(request, "signup.html")
+        # # ✅ 1. Check password match
+        # if password != confirm_password:
+        #     messages.error(request, "Passwords do not match.")
+        #     return render(request, "signup.html")
 
         # ✅ 2. Check email already used
         if Signup.objects.filter(email=email).exists():
@@ -31,7 +31,7 @@ def signup(request):
             messages.success(request, "Account created successfully! Please log in below.")
             
             # ✅ 4. Instead of redirect, just render login page
-            return render(request, "login.html")
+            return redirect("login")
 
         except IntegrityError:
             messages.error(request, "Something went wrong. Try again.")
