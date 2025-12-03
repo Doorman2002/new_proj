@@ -27,5 +27,6 @@ urlpatterns = [
     path("withdraw/",include("withdraw.urls")),
     path("deposit/",include("deposit.urls")),
     path("withdraw_processing/",include("withdraw_process.urls")),
+    path("chat",include("chat.urls")),
     
 ]

@@ -29,6 +29,7 @@ INSTALLED_APPS = [
     "withdraw",
     "deposit",
     "withdraw_process",
+    "chat"
 ]
 
 MIDDLEWARE = [
@@ -61,17 +62,38 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'NEW.wsgi.application'
 
-# Database (Railway)
+# # Database (Railway)
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'railway',
+#         'USER': 'postgres',
+#         'PASSWORD': 'jUGstCVCtaPncouGPaFREgurkctmPjMJ',
+#         'HOST': 'caboose.proxy.rlwy.net',
+#         'PORT': '18402',
+#     }
+# }
+# Database (Render)
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'railway',
-        'USER': 'postgres',
-        'PASSWORD': 'jUGstCVCtaPncouGPaFREgurkctmPjMJ',
-        'HOST': 'caboose.proxy.rlwy.net',
-        'PORT': '18402',
+        'NAME': 'aclery',
+        'USER': 'aclery_user',
+        'PASSWORD': 'YURKp45NN145TcZyyHlZvJSCGVoHp0mZ',
+        'HOST': 'dpg-d4nnoechg0os739h3hq0-a.oregon-postgres.render.com',
+        'PORT': '5432',
     }
 }
+
+
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
 
 # Password validation
 AUTH_PASSWORD_VALIDATORS = [
